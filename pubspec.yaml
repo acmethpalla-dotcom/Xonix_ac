@@ -1,0 +1,36 @@
+name: xonix_ac
+description: Reproductor de música offline XONIX
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  audioplayers: ^6.0.0
+  file_picker: ^8.0.0
+  shared_preferences: ^2.3.2
+  http: ^1.2.0
+  path_provider: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  msix: ^3.16.7
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+
+msix_config:
+  display_name: XONIX
+  publisher_display_name: Sebastian
+  identity_name: com.sebastian.xonix
+  msix_version: 1.0.0.0
+  logo_path: assets/icons/app_icon.png
+  icons_background_color: transparent
+  architecture: x64
+  capabilities: runFullTrust
+  languages: es-CO, en-US
